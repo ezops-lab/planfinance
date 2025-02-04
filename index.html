@@ -1,4 +1,39 @@
-<head>Welcome</head>
-<br>
-</br>
-<body> Welcome to plan Finance</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .dark-theme {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <h1>Welcome to My Homepage</h1>
+    <p>Select a theme:</p>
+    <select id="themeSelector">
+        <option value="light">Light Theme</option>
+        <option value="dark">Dark Theme</option>
+    </select>
+    <script>
+        const themeSelector = document.getElementById('themeSelector');
+        
+        themeSelector.addEventListener('change', function() {
+            document.body.className = this.value + '-theme';
+        });
+    </script>
+</body>
+</html>
