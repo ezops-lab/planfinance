@@ -1,0 +1,7 @@
+Start Backend:
+-------------------------
+node server.js
+
+Start Frontend:
+--------------------------
+npm start
