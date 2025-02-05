@@ -5,7 +5,7 @@ body {
             transition: background-color 0.3s, color 0.3s;
         }
         .light-theme {
-            background-color: #ffffff;
+            background-color: #0080ff;
             color: #000000;
         }
         .dark-theme {
@@ -67,4 +67,8 @@ nav a {
 .post p {
     font-size: 14px;
     color: #666;
+}
+h1 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
 }
