@@ -11,8 +11,25 @@ npx create-react-app plan-your-finance
 
 cd plan-your-finance
 npm install react-router-dom tailwindcss axios jwt-decode
+==========================================================================
+Database schema:
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
 
-+++--------------------+++++++++++++++++++
+CREATE TABLE transactions (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    category VARCHAR(100),
+    amount DECIMAL(10,2),
+    type VARCHAR(10) CHECK (type IN ('income', 'expense')),
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+==========================================================================
 Start Backend:
 -------------------------
 node server.js
