@@ -1,3 +1,18 @@
+Dependencies:
+Backend:
+-------------------------------------
+bash
+npm install express sequelize pg pg-hstore bcryptjs jsonwebtoken multer xlsx cors dotenv
+
+Frontend:
+----------------------
+bash
+npx create-react-app plan-your-finance
+
+cd plan-your-finance
+npm install react-router-dom tailwindcss axios jwt-decode
+
++++--------------------+++++++++++++++++++
 Start Backend:
 -------------------------
 node server.js
